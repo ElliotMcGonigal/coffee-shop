@@ -69,7 +69,19 @@ class CoffeeControl extends React.Component {
     }
   }
 
-  
+  handleAddingNewCoffeeToList = (newCoffee) => {
+    const newMainCoffeeList = this.state.mainCoffeeList.concat(newCoffee);
+    this.setState({
+      mainCoffeeList: newMainCoffeeList,
+      formVisibleOnPage: false
+    });
+  }
+
+  handleEditClick = () => {
+    this.setState({
+      editing: true
+    });
+  }
 }
 
 export default CoffeeControl;
