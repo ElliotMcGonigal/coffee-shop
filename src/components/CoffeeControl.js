@@ -1,14 +1,12 @@
 import React from 'react';
 import CoffeeDetail from "./CoffeeDetail";
 import CoffeeList from "./CoffeeList";
-import NewCoffee from "./NewCoffeeForm";
 import EditCoffeeForm from "./EditCoffeeForm";
-import coffeesack1 from "./../img/coffee-sack.jpg";
-import coffeesack2 from "./../img/coffee-sack.jpg";
-import coffeesack3 from "./../img/coffee-sack.jpg";
-import coffeesack4 from "./../img/coffee-sack.jpg";
-import coffeesack5 from "./../img/coffee-sack.jpg";
-import { render } from '@testing-library/react';
+import coffeesack1 from "./../img/coffeesack1.jpg";
+import coffeesack2 from "./../img/coffeesack2.jpg";
+import coffeesack3 from "./../img/coffeesack3.jpg";
+import coffeesack4 from "./../img/coffeesack4.jpg";
+import coffeesack5 from "./../img/coffeesack5.jpg";
 import NewCoffeeForm from './NewCoffeeForm';
 
 class CoffeeControl extends React.Component {

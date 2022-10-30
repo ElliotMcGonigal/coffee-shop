@@ -1,5 +1,5 @@
 import React from "react";
-import coffeeline from "./../img/coffeeline";
+import coffeeline from "./../img/coffeeline.jpg";
 
 function Header(){
   return (
