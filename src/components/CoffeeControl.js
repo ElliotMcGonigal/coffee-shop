@@ -21,7 +21,7 @@ class CoffeeControl extends React.Component {
         price: 5,
         roast: "medium",
         picture: coffeesack1,
-        quantity: 130,
+        quantity: 46,
         id: "1"
       },
       {
@@ -30,7 +30,7 @@ class CoffeeControl extends React.Component {
         price: 5,
         roast: "dark",
         picture: coffeesack2,
-        quantity: 130,
+        quantity: 25,
         id: "2"
       },
       {
@@ -39,7 +39,7 @@ class CoffeeControl extends React.Component {
         price: 5,
         roast: "medium",
         picture: coffeesack3,
-        quantity: 130,
+        quantity: 12,
         id: "3"
       },
       {
@@ -48,7 +48,7 @@ class CoffeeControl extends React.Component {
         price: 5,
         roast: "light",
         picture: coffeesack4,
-        quantity: 130,
+        quantity: 19,
         id: "4"
       },
       {
@@ -57,7 +57,7 @@ class CoffeeControl extends React.Component {
         price: 5,
         roast: "decaf",
         picture: coffeesack5,
-        quantity: 130,
+        quantity: 103,
         id: "5"
       }],
       selectedCoffee: null,
