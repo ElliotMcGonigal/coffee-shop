@@ -8,6 +8,8 @@ import coffeesack2 from "./../img/coffee-sack.jpg";
 import coffeesack3 from "./../img/coffee-sack.jpg";
 import coffeesack4 from "./../img/coffee-sack.jpg";
 import coffeesack5 from "./../img/coffee-sack.jpg";
+import { render } from '@testing-library/react';
+import NewCoffeeForm from './NewCoffeeForm';
 
 class CoffeeControl extends React.Component {
 
@@ -130,6 +132,42 @@ class CoffeeControl extends React.Component {
     });
   }
 
+  
+  render() {
+    let currentlyVisibleState = null;
+    let buttonText = null;
+
+    if (this.state.editing) {
+      currentlyVisibleState = <EditCoffeeForm
+      coffee={this.state.selectedCoffee}
+      onEditCoffee={this.handleEditingCoffeeInList} />
+      buttonText = "Return to Coffee List"
+    } else if (this.state.selectedCoffee) {
+      currentlyVisibleState = <CoffeeDetail 
+      coffee={this.state.selectedCoffee}
+      onClickingEdit={this.handleEditClick}
+      onClickingOrder={this.handleBuyingNewCoffee}
+      onClickingSell={this.handleSellingCoffee} />
+      buttonText = "Return to Coffee List"
+    } else if (this.state.formVisibleOnPage) {
+      currentlyVisibleState = <NewCoffeeForm
+      onNewCoffeeCreation={this.handleAddingNewCoffeeToList} />
+      buttonText = "Return to Coffee List"
+    } else {
+      currentlyVisibleState = <CoffeeList 
+      coffeeList={this.state.mainCoffeeList}
+      onCoffeeSelection={this.handleChangingSelectedCoffee} />
+      buttonText = "Add a new Coffee"
+    } return (
+      <React.Fragment>
+        {currentlyVisibleState}
+        <hr />
+        <button onClick={this.handleClick}>{buttonText}</button>
+      </React.Fragment>
+    );
+  }
 }
+
+
 
 export default CoffeeControl;
