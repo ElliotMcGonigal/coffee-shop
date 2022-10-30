@@ -92,6 +92,44 @@ class CoffeeControl extends React.Component {
       editing: true
     });
   }
+
+  handleChangingSelectedCoffee=(id) => {
+    const selectedCoffee = this.state.mainCoffeeList.filter(coffee => coffee.id === id)[0];
+    this.setState({selectedCoffee: selectedCoffee});
+  }
+
+  handleEditingCoffeeInList = (coffeeToEdit) => {
+    const editedMainCoffeeList = this.state.mainCoffeeList.filter(coffee => coffee.id !== this.state.selectedCoffee.id).concat(coffeeToEdit);
+    this.setState({
+      mainCoffeeList: editedMainCoffeeList,
+      editing: false,
+      selectedCoffee: null
+    });
+  }
+
+  handleSellingCoffee = (id) => {
+    const coffeeToSell = this.state.mainCoffeeList.filter(coffee => coffee.id === id)[0];
+    if (coffeeToSell.quantity > 0) {
+      const newQuantity = coffeeToSell.quantity - 1;
+      const coffeeSale = {...coffeeToSell, quantity:newQuantity};
+      const newMainCoffeeList = this.state.mainCoffeeList.filter(coffee => coffee.id !== id).concat(coffeeSale);
+      this.setState({
+        mainCoffeeList: newMainCoffeeList,
+        selectedCoffee: null
+      });
+    }
+  }
+
+  handleBuyingNewCoffee = (id) => {
+    const coffeeRefill = this.state.mainCoffeeList.filter(coffee => coffee.id === id)[0];
+    const refilledCoffee = {...coffeeRefill, quantity:130};
+    const newMainCoffeeList = this.state.mainCoffeeList.filter(coffee => coffee.id !== id).concat(refilledCoffee);
+    this.setState({
+      mainCoffeeList: newMainCoffeeList,
+      selectedCoffee: null
+    });
+  }
+
 }
 
 export default CoffeeControl;
