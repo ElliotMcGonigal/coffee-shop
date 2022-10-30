@@ -13,6 +13,7 @@ function NewCoffeeForm(props) {
       price: parseInt(event.target.price.origin.value),
       roast: event.target.roast.value,
       quantity: parseInt(event.target.quantity.value),
+      picture: event.target.picture.value,
       id: v4()
     });
   }

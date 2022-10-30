@@ -3,6 +3,11 @@ import CoffeeDetail from "./CoffeeDetail";
 import CoffeeList from "./CoffeeList";
 import NewCoffee from "./NewCoffeeForm";
 import UpdateCoffee from "./UpdateCoffee";
+import coffeesack1 from "./../img/coffee-sack.jpg";
+import coffeesack2 from "./../img/coffee-sack.jpg";
+import coffeesack3 from "./../img/coffee-sack.jpg";
+import coffeesack4 from "./../img/coffee-sack.jpg";
+import coffeesack5 from "./../img/coffee-sack.jpg";
 
 class CoffeeControl extends React.Component {
 
@@ -15,6 +20,7 @@ class CoffeeControl extends React.Component {
         origin: "California",
         price: 5,
         roast: "medium",
+        picture: coffeesack1,
         quantity: 130,
         id: "1"
       },
@@ -23,6 +29,7 @@ class CoffeeControl extends React.Component {
         origin: "Oregon",
         price: 5,
         roast: "dark",
+        picture: coffeesack2,
         quantity: 130,
         id: "2"
       },
@@ -31,6 +38,7 @@ class CoffeeControl extends React.Component {
         origin: "New York",
         price: 5,
         roast: "medium",
+        picture: coffeesack3,
         quantity: 130,
         id: "3"
       },
@@ -39,6 +47,7 @@ class CoffeeControl extends React.Component {
         origin: "Washington",
         price: 5,
         roast: "light",
+        picture: coffeesack4,
         quantity: 130,
         id: "4"
       },
@@ -47,6 +56,7 @@ class CoffeeControl extends React.Component {
         origin: "Idaho",
         price: 5,
         roast: "decaf",
+        picture: coffeesack5,
         quantity: 130,
         id: "5"
       }],

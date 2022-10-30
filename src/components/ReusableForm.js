@@ -26,6 +26,10 @@ function ReusableForm(props) {
           type='number'
           name='quantity'
           placeholder='Enter the number currently in stock.' />
+        <input
+          type='file'
+          name='picture'
+          placeholder='Upload a photo' />
         <button type='submit'>{props.buttonText}</button>
       </form>
     </React.Fragment>
