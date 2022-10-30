@@ -2,7 +2,7 @@ import React from 'react';
 import CoffeeDetail from "./CoffeeDetail";
 import CoffeeList from "./CoffeeList";
 import NewCoffee from "./NewCoffeeForm";
-import UpdateCoffee from "./UpdateCoffee";
+import EditCoffeeForm from "./EditCoffeeForm";
 import coffeesack1 from "./../img/coffee-sack.jpg";
 import coffeesack2 from "./../img/coffee-sack.jpg";
 import coffeesack3 from "./../img/coffee-sack.jpg";
