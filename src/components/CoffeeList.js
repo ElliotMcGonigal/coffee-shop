@@ -22,7 +22,7 @@ function CoffeeList(props) {
   );
 }
 
-CoffeeList.proptypes = {
+CoffeeList.propTypes = {
   onCoffeeSelection: PropTypes.func,
   coffeeList: PropTypes.array
 };
